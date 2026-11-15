@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:,">
 <title>Martin Legault Photo — Fine-Art Photography, Ottawa</title>
-<meta name="description" content="Martin Legault Photo — fine-art photography from Ottawa, Toronto, Montréal and beyond. Portfolio, journal, print store, upcoming projects and the February 2027 exhibition.">
+<meta name="description" content="Martin Legault Photo — fine-art photography from Ottawa, Toronto, Montréal and beyond. Portfolio, journal, print store and upcoming projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,7 +90,7 @@ section{padding:clamp(56px,8vw,110px) 0}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
 .split img{border-radius:20px;width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow)}
 .big-quote{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.25;font-style:italic}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
 .stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
 .stat b{font-family:var(--serif);font-size:2rem;display:block}
 .stat span{color:var(--muted);font-size:.82rem}
@@ -179,7 +179,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
   <div class="wrap hbar">
     <a class="brand" href="#" data-nav="home">Martin Legault<small>Photo · Ottawa, Canada</small></a>
     <nav class="main" aria-label="Main">
-      <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Projects</a><a href="#" data-nav="exhibitions">Exhibitions</a><a href="#" data-nav="contact">Contact</a>
+      <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Projects</a><a href="#" data-nav="contact">Contact</a>
     </nav>
     <div class="hacts">
       <button class="cartbtn" id="cartBtn" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
@@ -187,7 +187,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
     </div>
   </div>
   <div class="wrap mmenu" id="mmenu">
-    <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="exhibitions">Exhibitions</a><a href="#" data-nav="contact">Contact</a>
+    <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="contact">Contact</a>
   </div>
 </header>
 
@@ -203,9 +203,8 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
         <p>From the stillness of a frozen Ottawa pond to sunrise over Montréal's Old Port — Martin Legault photographs Canadian cities, wild places and fleeting human moments, and is now preparing the next chapter of his work.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <button class="btn" data-nav="portfolio">View the Portfolio</button>
-          <button class="btn ghost" data-nav="exhibitions">February 2027 Exhibition</button>
         </div>
-        <div class="hero-meta"><span>New site launching January 2027</span><span>Street · Architecture · Nature · Still Life · Portrait</span></div>
+        <div class="hero-meta"><span>Street · Architecture · Nature · Still Life · Portrait</span></div>
       </div>
     </div>
   </div>
@@ -219,7 +218,6 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
         <div class="stats">
           <div class="stat"><b>5</b><span>Collections — street, architectural, nature, still life &amp; portrait</span></div>
           <div class="stat"><b>3</b><span>Cities at the heart of the work — Ottawa, Toronto, Montréal</span></div>
-          <div class="stat"><b>Feb 2027</b><span>Next exhibition — details to be confirmed</span></div>
         </div>
       </div>
       <img src="images/img-02.jpg" alt="Winter Mist — frosted trees and a frozen pond">
@@ -236,20 +234,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
     <div class="masonry" id="homeWorks"></div>
   </div>
 
-  <div class="wrap" style="padding:clamp(56px,8vw,100px) clamp(18px,4vw,56px)">
-    <div class="exhib">
-      <div>
-        <p class="kicker">Exhibition · February 2027</p>
-        <h2>A new body of work, shown for the first time.</h2>
-        <p class="lede">Martin's February 2027 exhibition will bring together new Canadian winter work, the SPAO portrait triptychs and large-format city panoramas. <span class="ph-tag">Venue &amp; dates — to be confirmed</span></p>
-        <p class="lede">Exact dates and venue will be announced here as soon as they are confirmed.</p>
-        <button class="btn" data-nav="exhibitions" style="margin-top:10px">Exhibition details &amp; enquiries</button>
-      </div>
-      <img src="images/img-03.jpg" alt="Panoramic Ottawa Downtown 2026">
-    </div>
-  </div>
-
-  <div class="wrap" style="padding-bottom:clamp(56px,8vw,100px)">
+  <div class="wrap" style="padding:clamp(56px,8vw,100px) clamp(18px,4vw,56px) clamp(56px,8vw,100px)">
     <div class="sec-head"><div><p class="kicker">Journal</p><h2>From the journal</h2></div><button class="btn ghost" data-nav="journal">All stories →</button></div>
     <div class="jgrid" id="homeJournal"></div>
     <div class="sec-head" style="margin-top:64px"><div><p class="kicker">Ahead</p><h2>Upcoming projects</h2></div><button class="btn ghost" data-nav="projects">See what's coming →</button></div>
@@ -329,46 +314,8 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
   <div class="wrap">
     <p class="kicker">Upcoming Projects</p>
     <h2 style="font-size:clamp(2.4rem,5vw,4rem);max-width:20ch">The next chapter, in progress.</h2>
-    <p class="lede" style="margin:16px 0 40px">Work now in development for the January 2027 launch and beyond. Release details are placeholders until confirmed.</p>
+    <p class="lede" style="margin:16px 0 40px">Work now in development. Release details are placeholders until confirmed.</p>
     <div id="projectList" style="display:grid;gap:26px"></div>
-  </div>
-</section>
-
-<!-- ================= EXHIBITIONS ================= -->
-<section class="view" id="view-exhibitions">
-  <div class="wrap">
-    <p class="kicker">Exhibitions</p>
-    <h2 style="font-size:clamp(2.4rem,5vw,4rem)">February 2027</h2>
-    <div class="exhib" style="margin:30px 0 44px">
-      <div>
-        <h2 style="font-size:clamp(1.9rem,3.6vw,2.8rem)">Martin Legault — New Work</h2>
-        <p class="lede">A solo exhibition of new photography: Canadian winter landscapes, the Winter 2026 SPAO portrait triptychs, and large-format panoramas of Ottawa, Toronto and Montréal.</p>
-        <p><span class="ph-tag">Dates — to be confirmed</span> &nbsp;<span class="ph-tag">Venue — to be confirmed</span> &nbsp;<span class="ph-tag">City — to be confirmed</span></p>
-        <p class="note">Venue, dates and opening details will be published here once confirmed. Use the enquiry form below for exhibition and press enquiries in the meantime.</p>
-      </div>
-      <img src="images/img-04.jpg" alt="Sunrise at the Montréal Clock Tower and Jacques Cartier Bridge">
-    </div>
-    <div class="sec-head"><div><h2 style="font-size:2rem">Featured in the exhibition</h2></div></div>
-    <div class="masonry" id="exhibWorks"></div>
-    <div class="split" style="margin-top:64px;align-items:start">
-      <div>
-        <h2 style="font-size:2rem;margin-bottom:12px">Past &amp; future exhibitions</h2>
-        <p class="lede">Further exhibition history and future dates will be listed here as they are confirmed.</p>
-        <p style="margin-top:14px"><span class="ph-tag">Exhibition history — to be confirmed</span></p>
-      </div>
-      <div>
-        <h2 style="font-size:2rem;margin-bottom:12px">Exhibition enquiry</h2>
-        <form id="exhibForm" novalidate>
-          <div class="row">
-            <div class="field"><label for="ex-name">Name</label><input id="ex-name" required><p class="err">Please enter your name.</p></div>
-            <div class="field"><label for="ex-email">Email</label><input id="ex-email" type="email" required><p class="err">Please enter a valid email.</p></div>
-          </div>
-          <div class="field"><label for="ex-msg">Message</label><textarea id="ex-msg" required></textarea><p class="err">Please write a short message.</p></div>
-          <button class="btn" type="submit">Send Exhibition Enquiry</button>
-          <div class="okbox" id="exhibOk" style="margin-top:16px"><b>Thank you — enquiry noted.</b><br>This is a demonstration form: nothing has been sent yet. Exhibition contact details will be published here once confirmed.</div>
-        </form>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -379,10 +326,10 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
       <div>
         <p class="kicker">Contact</p>
         <h2 style="font-size:clamp(2.4rem,5vw,3.8rem)">Start a conversation.</h2>
-        <p class="lede" style="margin:16px 0">For print enquiries, commissions, collaborations and exhibition questions, write using the form — or by email once the studio address is published.</p>
+        <p class="lede" style="margin:16px 0">For print enquiries, commissions and collaborations, write using the form — or by email once the studio address is published.</p>
         <p><span class="ph-tag">Email — to be confirmed</span></p>
-        <p class="lede">Studio: Ottawa, Canada.<br>New website launching January 2027.</p>
-        <img src="images/img-05.jpg" alt="Sunrise over the Ottawa River" style="margin-top:24px;height:300px">
+        <p class="lede">Studio: Ottawa, Canada.</p>
+        <img src="images/img-03.jpg" alt="Sunrise over the Ottawa River" style="margin-top:24px;height:300px">
       </div>
       <form id="contactForm" novalidate style="background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3vw,34px)">
         <div class="row">
@@ -390,7 +337,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
           <div class="field"><label for="ct-email">Email *</label><input id="ct-email" type="email" required><p class="err">Please enter a valid email.</p></div>
         </div>
         <div class="field"><label for="ct-subject">Subject</label>
-          <select id="ct-subject"><option>Print enquiry</option><option>Commission</option><option>Exhibition — February 2027</option><option>Collaboration</option><option>Other</option></select></div>
+          <select id="ct-subject"><option>Print enquiry</option><option>Commission</option><option>Collaboration</option><option>Other</option></select></div>
         <div class="field"><label for="ct-msg">Message *</label><textarea id="ct-msg" required></textarea><p class="err">Please write a short message.</p></div>
         <button class="btn" type="submit" style="width:100%">Send Message</button>
         <div class="okbox" id="contactOk" style="margin-top:16px"><b>Thank you — message noted.</b><br>This is a demonstration form: nothing has been sent yet. The studio email will be published here once confirmed.</div>
@@ -406,7 +353,6 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
     <span class="hideS">Ottawa, Canada</span>
     <a href="#" data-nav="portfolio">Portfolio</a>
     <a href="#" data-nav="store" class="hideS">Art Store</a>
-    <a href="#" data-nav="exhibitions">Feb 2027</a>
     <a href="#" data-nav="contact">Contact</a>
     <span>© 2026</span>
   </div>
@@ -438,30 +384,30 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
 <script>
 var WORKS=[
  {t:"Panorama — Downtown Toronto",c:"architectural",img:"images/img-01.jpg",loc:"Toronto, Ontario"},
- {t:"Dows Lake",c:"nature",img:"images/img-06.jpg",loc:"Ottawa, Ontario · 21×11"},
- {t:"Montréal UdM — La nuit",c:"architectural",img:"images/img-07.jpg",loc:"Montréal, Québec"},
+ {t:"Dows Lake",c:"nature",img:"images/img-04.jpg",loc:"Ottawa, Ontario · 21×11"},
+ {t:"Montréal UdM — La nuit",c:"architectural",img:"images/img-05.jpg",loc:"Montréal, Québec"},
  {t:"Winter Mist — Frosted Trees, Frozen Pond",c:"nature",img:"images/img-02.jpg",loc:"Ontario"},
- {t:"Apocalyptic Sky — Mississippi River, Blakeney",c:"nature",img:"images/img-08.jpg",loc:"Blakeney, Ontario"},
- {t:"Sunrise Over Ottawa River",c:"nature",img:"images/img-05.jpg",loc:"Ottawa, Ontario"},
- {t:"Kylemore Abbey Castle",c:"architectural",img:"images/img-09.jpg",loc:"Ireland"},
- {t:"Bobcat",c:"nature",img:"images/img-10.jpg",loc:"Wildlife study"},
- {t:"Fou de Bassan — Northern Gannet, Flying",c:"nature",img:"images/img-11.jpg",loc:"Seabird study"},
- {t:"Tree Web",c:"nature",img:"images/img-12.jpg",loc:"Nature study"},
- {t:"Navigating on the Bosphorus",c:"street",img:"images/img-13.jpg",loc:"Travel — Bosphorus"},
- {t:"Kingston Boardwalk",c:"architectural",img:"images/img-14.jpg",loc:"Kingston, Ontario · 31×19"},
- {t:"Sunrise in the Old Port of Montréal",c:"architectural",img:"images/img-15.jpg",loc:"Montréal, Québec"},
- {t:"Sunrise — Montréal Clock Tower & Jacques Cartier Bridge",c:"architectural",img:"images/img-04.jpg",loc:"Montréal, Québec"},
- {t:"Luis — SPAO Environmental Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-16.jpg",loc:"SPAO, Ottawa"},
- {t:"Devon — SPAO Conceptual Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-17.jpg",loc:"SPAO, Ottawa"},
- {t:"Serge — Triptych",c:"portrait",img:"images/img-18.jpg",loc:"SPAO, Ottawa"},
- {t:"Street Photography — Triptych 1",c:"street",img:"images/img-19.jpg",loc:"Street series"},
- {t:"Ice Skating — Toronto Old City Hall",c:"street",img:"images/img-20.jpg",loc:"Toronto, Ontario"},
- {t:"Cyclist — Beach at Carleton-sur-mer",c:"street",img:"images/img-21.jpg",loc:"Carleton-sur-mer, Québec"},
- {t:"Runner on Scott Street",c:"street",img:"images/img-22.jpg",loc:"Ottawa, Ontario"},
- {t:"Frosted Maple Leaf",c:"nature",img:"images/img-23.jpg",loc:"Nature study · 15½×15½"},
- {t:"Colours, Lines, Reflexions",c:"stilllife",img:"images/img-24.jpg",loc:"Abstract study"},
- {t:"Mystery Man",c:"street",img:"images/img-25.jpg",loc:"Street portrait"},
- {t:"Panoramic Ottawa Downtown 2026",c:"architectural",img:"images/img-03.jpg",loc:"Ottawa, Ontario"},
+ {t:"Apocalyptic Sky — Mississippi River, Blakeney",c:"nature",img:"images/img-06.jpg",loc:"Blakeney, Ontario"},
+ {t:"Sunrise Over Ottawa River",c:"nature",img:"images/img-03.jpg",loc:"Ottawa, Ontario"},
+ {t:"Kylemore Abbey Castle",c:"architectural",img:"images/img-07.jpg",loc:"Ireland"},
+ {t:"Bobcat",c:"nature",img:"images/img-08.jpg",loc:"Wildlife study"},
+ {t:"Fou de Bassan — Northern Gannet, Flying",c:"nature",img:"images/img-09.jpg",loc:"Seabird study"},
+ {t:"Tree Web",c:"nature",img:"images/img-10.jpg",loc:"Nature study"},
+ {t:"Navigating on the Bosphorus",c:"street",img:"images/img-11.jpg",loc:"Travel — Bosphorus"},
+ {t:"Kingston Boardwalk",c:"architectural",img:"images/img-12.jpg",loc:"Kingston, Ontario · 31×19"},
+ {t:"Sunrise in the Old Port of Montréal",c:"architectural",img:"images/img-13.jpg",loc:"Montréal, Québec"},
+ {t:"Sunrise — Montréal Clock Tower & Jacques Cartier Bridge",c:"architectural",img:"images/img-14.jpg",loc:"Montréal, Québec"},
+ {t:"Luis — SPAO Environmental Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-15.jpg",loc:"SPAO, Ottawa"},
+ {t:"Devon — SPAO Conceptual Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-16.jpg",loc:"SPAO, Ottawa"},
+ {t:"Serge — Triptych",c:"portrait",img:"images/img-17.jpg",loc:"SPAO, Ottawa"},
+ {t:"Street Photography — Triptych 1",c:"street",img:"images/img-18.jpg",loc:"Street series"},
+ {t:"Ice Skating — Toronto Old City Hall",c:"street",img:"images/img-19.jpg",loc:"Toronto, Ontario"},
+ {t:"Cyclist — Beach at Carleton-sur-mer",c:"street",img:"images/img-20.jpg",loc:"Carleton-sur-mer, Québec"},
+ {t:"Runner on Scott Street",c:"street",img:"images/img-21.jpg",loc:"Ottawa, Ontario"},
+ {t:"Frosted Maple Leaf",c:"nature",img:"images/img-22.jpg",loc:"Nature study · 15½×15½"},
+ {t:"Colours, Lines, Reflexions",c:"stilllife",img:"images/img-23.jpg",loc:"Abstract study"},
+ {t:"Mystery Man",c:"street",img:"images/img-24.jpg",loc:"Street portrait"},
+ {t:"Panoramic Ottawa Downtown 2026",c:"architectural",img:"images/img-25.jpg",loc:"Ottawa, Ontario"},
  {t:"Ottawa Car Show — Mustang",c:"stilllife",img:"images/img-26.jpg",loc:"Ottawa Car Show · 10×8"},
  {t:"Car Show — Porsche",c:"stilllife",img:"images/img-27.jpg",loc:"Ottawa Car Show · 10×8"},
  {t:"Ottawa — A Northern Capital",c:"architectural",img:"images/img-28.jpg",loc:"Ottawa, Ontario"},
@@ -470,8 +416,8 @@ var WORKS=[
 ];
 var CATNAMES={street:"Street Photography",architectural:"Architectural Photography",nature:"Nature Photography",stilllife:"Still Life Photography",portrait:"Portrait Photography"};
 var COLLS=[
- {c:"street",img:"images/img-19.jpg",cls:"c1"},{c:"architectural",img:"images/img-03.jpg",cls:"c2"},
- {c:"nature",img:"images/img-02.jpg",cls:"c3"},{c:"stilllife",img:"images/img-24.jpg",cls:"c4"},{c:"portrait",img:"images/img-16.jpg",cls:"c5"}
+ {c:"street",img:"images/img-18.jpg",cls:"c1"},{c:"architectural",img:"images/img-25.jpg",cls:"c2"},
+ {c:"nature",img:"images/img-02.jpg",cls:"c3"},{c:"stilllife",img:"images/img-23.jpg",cls:"c4"},{c:"portrait",img:"images/img-15.jpg",cls:"c5"}
 ];
 var SIZES=["6×4","7×5","10×8","17×11","21×11","31×19"];
 var SIZEPRICE={"6×4":45,"7×5":65,"10×8":95,"17×11":165,"21×11":240,"31×19":420};
@@ -487,15 +433,14 @@ var PRODUCTS=[
  {id:7,wi:8,t:"Fou de Bassan — Northern Gannet, Flying",d:"A Northern Gannet in full flight — a study of grace, speed and Atlantic light."}
 ];
 var ARTICLES=[
- {id:0,tag:"Behind the Scenes",date:"Journal · Winter 2026",t:"Inside the SPAO Portrait Triptychs",img:"images/img-17.jpg",ex:"How the Winter 2026 portrait triptychs — Luis, Devon, Serge, Rex and Mike — were conceived and made at the School of the Photographic Arts Ottawa.",body:["This winter, at SPAO — the School of the Photographic Arts Ottawa — Martin set out to make portraits that work as triptychs: three frames that only make complete sense together. Luis was photographed environmentally, in his own space; Devon conceptually, built around a single idea.","The discipline of the triptych is patience. Each frame has to hold on its own, yet leave something unsaid for the next. Serge, Rex and Mike completed the series — five sitters, five temperaments, one consistent winter light.","The full series will be shown publicly for the first time at the February 2027 exhibition. Full article text — placeholder, to be completed before launch."]},
- {id:1,tag:"Field Notes",date:"Journal · Ottawa",t:"Chasing Sunrise on the Ottawa River",img:"images/img-05.jpg",ex:"Cold mornings, patient waiting, and the few minutes when the capital's river turns to gold.",body:["The alarm goes at five. By six, Martin is on the Ottawa River with a tripod, gloves, and no guarantee of anything. Sunrise photography in the capital is an exercise in showing up: most mornings give grey; a few give gold.","The framed 6×4 study 'Sunrise Over Ottawa River' came from one of the generous mornings — the light arriving all at once, the water still enough to hold it.","His advice, such as it is: scout the evening before, arrive in the dark, and stay twenty minutes past the moment you think is the photograph. Full article text — placeholder, to be completed before launch."]},
- {id:2,tag:"Travel",date:"Journal · Montréal",t:"Dawn in the Old Port of Montréal",img:"images/img-15.jpg",ex:"The Clock Tower, the Jacques Cartier Bridge, and a city that rewards those who rise before it.",body:["Montréal's Old Port at dawn belongs to almost no one: a few runners, the gulls, and the light moving up the Clock Tower. Across three mornings, Martin worked the same ground — the tower, the bridge, the blue-gold hour before the sun clears the river.","'Quand le jour se lève' — when the day rises — became the title of the series, and the feeling of it: a great city, briefly quiet.","The Old Port sunrises anchor the Architectural collection and will hang as large prints in February 2027. Full article text — placeholder, to be completed before launch."]},
- {id:3,tag:"Inspiration",date:"Journal · Travel",t:"From the Bosphorus to the Gaspésie",img:"images/img-13.jpg",ex:"Water as a subject: ferries on the Bosphorus, a house at Rivière-aux-Renards, and the Kingston boardwalk.",body:["Some subjects follow a photographer home. For Martin it is water in motion: navigating the Bosphorus between two continents, the St. Lawrence opening past the Gaspésie, the boardwalk at Kingston where the lake begins.","Each place asks for a different patience — Istanbul's ferries wait for no one; the Maison Rivière aux Renards in the Gaspésie asks only that you notice it before the light goes.","The travel work feeds everything else: it is where the eye rests, and where it learns. Full article text — placeholder, to be completed before launch."]}
+ {id:0,tag:"Behind the Scenes",date:"Journal · Winter 2026",t:"Inside the SPAO Portrait Triptychs",img:"images/img-16.jpg",ex:"How the Winter 2026 portrait triptychs — Luis, Devon, Serge, Rex and Mike — were conceived and made at the School of the Photographic Arts Ottawa.",body:["This winter, at SPAO — the School of the Photographic Arts Ottawa — Martin set out to make portraits that work as triptychs: three frames that only make complete sense together. Luis was photographed environmentally, in his own space; Devon conceptually, built around a single idea.","The discipline of the triptych is patience. Each frame has to hold on its own, yet leave something unsaid for the next. Serge, Rex and Mike completed the series — five sitters, five temperaments, one consistent winter light.","Full article text — placeholder, to be completed before launch."]},
+ {id:1,tag:"Field Notes",date:"Journal · Ottawa",t:"Chasing Sunrise on the Ottawa River",img:"images/img-03.jpg",ex:"Cold mornings, patient waiting, and the few minutes when the capital's river turns to gold.",body:["The alarm goes at five. By six, Martin is on the Ottawa River with a tripod, gloves, and no guarantee of anything. Sunrise photography in the capital is an exercise in showing up: most mornings give grey; a few give gold.","The framed 6×4 study 'Sunrise Over Ottawa River' came from one of the generous mornings — the light arriving all at once, the water still enough to hold it.","His advice, such as it is: scout the evening before, arrive in the dark, and stay twenty minutes past the moment you think is the photograph. Full article text — placeholder, to be completed before launch."]},
+ {id:2,tag:"Travel",date:"Journal · Montréal",t:"Dawn in the Old Port of Montréal",img:"images/img-13.jpg",ex:"The Clock Tower, the Jacques Cartier Bridge, and a city that rewards those who rise before it.",body:["Montréal's Old Port at dawn belongs to almost no one: a few runners, the gulls, and the light moving up the Clock Tower. Across three mornings, Martin worked the same ground — the tower, the bridge, the blue-gold hour before the sun clears the river.","'Quand le jour se lève' — when the day rises — became the title of the series, and the feeling of it: a great city, briefly quiet.","The Old Port sunrises anchor the Architectural collection. Full article text — placeholder, to be completed before launch."]},
+ {id:3,tag:"Inspiration",date:"Journal · Travel",t:"From the Bosphorus to the Gaspésie",img:"images/img-11.jpg",ex:"Water as a subject: ferries on the Bosphorus, a house at Rivière-aux-Renards, and the Kingston boardwalk.",body:["Some subjects follow a photographer home. For Martin it is water in motion: navigating the Bosphorus between two continents, the St. Lawrence opening past the Gaspésie, the boardwalk at Kingston where the lake begins.","Each place asks for a different patience — Istanbul's ferries wait for no one; the Maison Rivière aux Renards in the Gaspésie asks only that you notice it before the light goes.","The travel work feeds everything else: it is where the eye rests, and where it learns. Full article text — placeholder, to be completed before launch."]}
 ];
 var PROJECTS=[
- {t:"Canadian Winter — A Continuing Series",img:"images/img-08.jpg",when:"In progress · Expected release — to be confirmed",d:"A long-form continuation of the winter work: apocalyptic skies over the Mississippi River at Blakeney, frosted maples, frozen ponds — the season Martin returns to every year.",tag:"Nature"},
- {t:"The February 2027 Exhibition Collection",img:"images/img-14.jpg",when:"Premiering February 2027 · Details to be confirmed",d:"Large-format prints prepared for the exhibition: the 31×19 Kingston Boardwalk panorama, the Ottawa Downtown 2026 panorama, and the complete SPAO portrait triptychs.",tag:"Exhibition"},
- {t:"Street Life — Toronto & Ottawa",img:"images/img-20.jpg",when:"In progress · Expected release — to be confirmed",d:"Skaters at Toronto's Old City Hall, winter sunbathers downtown, a runner on Scott Street — an ongoing street series about how Canadian cities live outdoors, in every season.",tag:"Street"}
+ {t:"Canadian Winter — A Continuing Series",img:"images/img-06.jpg",when:"In progress · Expected release — to be confirmed",d:"A long-form continuation of the winter work: apocalyptic skies over the Mississippi River at Blakeney, frosted maples, frozen ponds — the season Martin returns to every year.",tag:"Nature"},
+ {t:"Street Life — Toronto & Ottawa",img:"images/img-19.jpg",when:"In progress · Expected release — to be confirmed",d:"Skaters at Toronto's Old City Hall, winter sunbathers downtown, a runner on Scott Street — an ongoing street series about how Canadian cities live outdoors, in every season.",tag:"Street"}
 ];
 var cart=[]; var lbList=WORKS; var lbIdx=0;
 
@@ -541,7 +486,6 @@ function renderPortfolio(f){
 function setFilter(f){$all('#filters .chip').forEach(function(ch){ch.classList.toggle('on',ch.getAttribute('data-filter')===f)});renderPortfolio(f)}
 $all('#filters .chip').forEach(function(ch){ch.addEventListener('click',function(){setFilter(ch.getAttribute('data-filter'))})});
 renderPortfolio('all');
-$('#exhibWorks').innerHTML=[24,14,11,3].map(function(i){return workCard(WORKS[i],i,'ex')}).join('');
 
 /* ---------- lightbox ---------- */
 var currentList=WORKS;
@@ -625,7 +569,7 @@ function validate(form){
   });return ok;
 }
 function wireForm(id,okId){var f=document.getElementById(id);f.addEventListener('submit',function(e){e.preventDefault();if(validate(f)){document.getElementById(okId).classList.add('show');f.querySelectorAll('input,textarea').forEach(function(i){if(i.type!=='submit')i.value=''})}})}
-wireForm('contactForm','contactOk');wireForm('exhibForm','exhibOk');
+wireForm('contactForm','contactOk');
 $('#checkoutForm').addEventListener('submit',function(e){e.preventDefault();if(validate(e.target)){$('#checkoutOk').classList.add('show')}});
 </script>
 </body>
