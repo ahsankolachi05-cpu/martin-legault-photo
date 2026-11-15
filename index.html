@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:,">
+<title>Martin Legault Photo — Fine-Art Photography, Ottawa</title>
+<meta name="description" content="Martin Legault Photo — fine-art photography from Ottawa, Toronto, Montréal and beyond. Portfolio, journal, print store, upcoming projects and the February 2027 exhibition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FBF8F2; --paper:#FFFFFF; --sand:#F3EEE4; --sand2:#EAE3D3;
+  --ink:#211D19; --ink2:#4A443C; --muted:#7A7264; --line:#E2DACB;
+  --accent:#8A6D3B; --accent2:#B08D4C;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+  --shadow:0 18px 50px rgba(33,29,25,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+button,[role="button"],select,summary,input,textarea,a.btn{min-height:2.25rem}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+.kicker{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 14px}
+.lede{color:var(--ink2);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#FBF8F2;font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:transform .25s ease,background .25s ease,color .25s ease}
+.btn:hover{transform:translateY(-2px);background:var(--accent);border-color:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#FBF8F2}
+.btn.small{padding:8px 18px;font-size:.78rem}
+.chip{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip.on{background:var(--ink);color:#FBF8F2;border-color:var(--ink)}
+.note{font-size:.8rem;color:var(--muted)}
+.ph-tag{display:inline-block;background:var(--sand);border:1px dashed var(--accent2);color:var(--accent);border-radius:6px;padding:2px 9px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+/* HEADER */
+header{position:sticky;top:0;z-index:60;background:rgba(251,248,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+.brand{font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:700}
+nav.main{display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{padding:9px 13px;text-decoration:none;font-size:.84rem;font-weight:600;color:var(--ink2);border-radius:999px;min-height:2.25rem;display:inline-flex;align-items:center}
+nav.main a:hover,nav.main a.on{color:var(--ink);background:var(--sand)}
+.hacts{display:flex;gap:8px;align-items:center}
+.cartbtn{position:relative;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:9px 16px;font-family:var(--sans);font-weight:700;font-size:.82rem;cursor:pointer}
+.cartbtn b{background:var(--accent);color:#fff;border-radius:999px;padding:1px 8px;margin-left:6px;font-size:.75rem}
+.burger{display:none;border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:9px 14px;font-weight:700;cursor:pointer;font-family:var(--sans)}
+.mmenu{display:none;border-top:1px solid var(--line);padding:10px 0 16px}
+.mmenu.open{display:block}
+.mmenu a{display:block;padding:11px 6px;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+/* VIEWS */
+.view{display:none}
+.view.on{display:block;animation:vin .45s ease}
+@keyframes vin{from{transform:translateY(10px)}to{transform:none}}
+section{padding:clamp(56px,8vw,110px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:38px}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+/* HERO */
+.hero{padding:26px 0 0}
+.hero-frame{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-frame img{width:100%;height:min(88vh,780px);object-fit:cover}
+.hero-cap{position:absolute;left:clamp(14px,3vw,36px);bottom:clamp(14px,3vw,36px);max-width:620px;padding:clamp(20px,3vw,36px);background:rgba(251,248,242,.97);border:1px solid var(--line);border-radius:18px;color:var(--ink);box-shadow:var(--shadow)}
+.c5 img{object-fit:contain;background:var(--sand)}
+.hero-cap h1{font-size:clamp(2.3rem,4.6vw,3.7rem);max-width:16ch}
+.hero-cap p{max-width:56ch;color:var(--ink2);margin:12px 0 20px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.hero-meta span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:600}
+/* COLLECTION CARDS */
+.coll-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.coll{position:relative;border-radius:18px;overflow:hidden;cursor:pointer;border:none;padding:0;background:none;text-align:left;font-family:inherit}
+.coll img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.coll:hover img{transform:scale(1.045)}
+.coll span{position:absolute;left:16px;bottom:14px;background:rgba(251,248,242,.94);border-radius:12px;padding:9px 15px;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink)}
+.coll em{position:absolute;top:14px;right:14px;background:rgba(251,248,242,.94);border-radius:999px;padding:4px 12px;font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.c1{grid-column:span 7;height:420px}.c2{grid-column:span 5;height:420px}.c3{grid-column:span 4;height:340px}.c4{grid-column:span 4;height:340px}.c5{grid-column:span 4;height:340px}
+/* MASONRY */
+.masonry{columns:3;column-gap:18px}
+.work{break-inside:avoid;margin:0 0 18px;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;background:var(--sand)}
+.work img{width:100%;transition:transform .55s ease}
+.work:hover img{transform:scale(1.04)}
+.work figcaption{padding:13px 16px;background:var(--paper);border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px}
+.work figcaption b{font-family:var(--serif);font-size:1.12rem;font-weight:600;display:block;line-height:1.25}
+.work figcaption small{color:var(--muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+/* SPLIT / EDITORIAL */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.split img{border-radius:20px;width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow)}
+.big-quote{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.25;font-style:italic}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stat b{font-family:var(--serif);font-size:2rem;display:block}
+.stat span{color:var(--muted);font-size:.82rem}
+/* EXHIBITION BANNER */
+.exhib{background:var(--sand);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.exhib img{border-radius:16px;width:100%;height:320px;object-fit:cover}
+.exhib h2{font-size:clamp(2rem,4vw,3.2rem)}
+/* JOURNAL */
+.jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.jcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;text-align:left;padding:0;font-family:inherit;transition:transform .3s ease,box-shadow .3s ease;width:100%}
+.jcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.jcard img{width:100%;height:210px;object-fit:cover}
+.jcard .jb{padding:20px}
+.jcard h3{font-size:1.45rem;margin-bottom:8px}
+.jcard p{color:var(--ink2);font-size:.92rem;margin:0}
+.jmeta{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+/* STORE */
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;text-align:left;padding:0;font-family:inherit;width:100%;transition:transform .3s,box-shadow .3s}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pcard img{width:100%;height:230px;object-fit:cover}
+.pcard .pb{padding:16px 18px 20px}
+.pcard h3{font-size:1.3rem;line-height:1.2}
+.price{font-weight:700;margin-top:6px}
+.price small{color:var(--accent);font-weight:700}
+/* FORMS */
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-family:var(--sans);font-size:.95rem;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.field{margin-bottom:16px}
+.err{color:#A33B2E;font-size:.8rem;margin-top:5px;display:none}
+.okbox{background:#EFF5EC;border:1px solid #BFD3B4;border-radius:16px;padding:22px;display:none}
+.okbox.show{display:block}
+/* LIGHTBOX + DRAWERS */
+.overlay{position:fixed;inset:0;background:rgba(251,248,242,.98);z-index:100;display:none;flex-direction:column}
+.overlay.open{display:flex}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,4vw,40px);border-bottom:1px solid var(--line)}
+.lb-top b{font-family:var(--serif);font-size:1.3rem}
+.lb-body{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:18px;min-height:0}
+.lb-body img{max-height:100%;max-width:min(1100px,86vw);border-radius:14px;box-shadow:var(--shadow);object-fit:contain}
+.lbbtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;width:48px;height:48px;font-size:1.2rem;cursor:pointer;flex:none}
+.lb-cap{text-align:center;padding:0 20px 22px;color:var(--ink2)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,94vw);background:var(--paper);z-index:110;box-shadow:-20px 0 60px rgba(33,29,25,.18);display:none;flex-direction:column}
+.drawer.open{display:flex}
+.drawer header{position:static;background:var(--paper)}
+.cart-items{flex:1;overflow:auto;padding:18px}
+.cart-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item img{width:74px;height:60px;object-fit:cover;border-radius:10px}
+.scrim{position:fixed;inset:0;background:rgba(33,29,25,.28);z-index:105;display:none}
+.scrim.show{display:block}
+/* PRODUCT DETAIL */
+.pd-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:start}
+.pd-grid>img{border-radius:20px;width:100%;box-shadow:var(--shadow)}
+.optrow{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}
+/* ARTICLE */
+.article{max-width:780px;margin:0 auto}
+.article img.heroimg{width:100%;border-radius:20px;margin:26px 0;box-shadow:var(--shadow)}
+.article p{color:var(--ink2);font-size:1.05rem}
+/* FOOTER — single horizontal row, light */
+footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;margin-top:0}
+.frow{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:10px;font-size:.78rem;color:var(--ink2);white-space:nowrap;overflow:hidden}
+.frow a{text-decoration:none;font-weight:600;padding:6px 4px}
+.frow .fb{font-family:var(--serif);font-size:1rem;color:var(--ink);font-weight:600}
+@media(max-width:1020px){.sgrid{grid-template-columns:repeat(2,1fr)}.jgrid{grid-template-columns:1fr 1fr}.masonry{columns:2}}
+@media(max-width:820px){
+  nav.main{display:none}.burger{display:block}
+  .split,.exhib,.pd-grid{grid-template-columns:1fr}
+  .c1,.c2,.c3,.c4,.c5{grid-column:span 12;height:280px}
+  .stats{grid-template-columns:1fr}
+  form .row{grid-template-columns:1fr}
+  .hero-frame img{height:46vh}
+  .hero-cap{position:static;background:var(--sand);padding:22px 20px 26px}
+  .lb-body{position:relative;padding:14px 10px}
+  .lb-body img{max-width:calc(100vw - 24px)}
+  #lbPrev{position:absolute;left:10px;top:50%;transform:translateY(-50%);z-index:2;background:rgba(255,255,255,.92)}
+  #lbNext{position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;background:rgba(255,255,255,.92)}
+  .frow{font-size:.64rem;gap:6px}.frow .hideS{display:none}
+}
+@media(max-width:560px){.sgrid,.jgrid{grid-template-columns:1fr}.masonry{columns:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="#" data-nav="home">Martin Legault<small>Photo · Ottawa, Canada</small></a>
+    <nav class="main" aria-label="Main">
+      <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Projects</a><a href="#" data-nav="exhibitions">Exhibitions</a><a href="#" data-nav="contact">Contact</a>
+    </nav>
+    <div class="hacts">
+      <button class="cartbtn" id="cartBtn" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
+      <button class="burger" id="burger" aria-label="Menu">Menu</button>
+    </div>
+  </div>
+  <div class="wrap mmenu" id="mmenu">
+    <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="exhibitions">Exhibitions</a><a href="#" data-nav="contact">Contact</a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<section class="view on" id="view-home" style="padding-top:0">
+  <div class="wrap hero">
+    <div class="hero-frame">
+      <img src="images/img-01.jpg" alt="Panorama of downtown Toronto by Martin Legault">
+      <div class="hero-cap">
+        <p class="kicker">Fine-Art Photography · Ottawa, Canada</p>
+        <h1>Photography as an art that evokes emotions.</h1>
+        <p>From the stillness of a frozen Ottawa pond to sunrise over Montréal's Old Port — Martin Legault photographs Canadian cities, wild places and fleeting human moments, and is now preparing the next chapter of his work.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" data-nav="portfolio">View the Portfolio</button>
+          <button class="btn ghost" data-nav="exhibitions">February 2027 Exhibition</button>
+        </div>
+        <div class="hero-meta"><span>New site launching January 2027</span><span>Street · Architecture · Nature · Still Life · Portrait</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:clamp(56px,8vw,100px)">
+    <div class="split">
+      <div>
+        <p class="kicker">The Artist</p>
+        <p class="big-quote">Photography as an art that evokes emotions — light, weather and a fraction of a second, held still.</p>
+        <p class="lede" style="margin-top:18px">Based in Ottawa, Martin Legault works across Canada and beyond: the capital in winter, Toronto's streets, Montréal at dawn, the Gaspésie coast, Ireland and the Bosphorus. His recent portrait series was made with SPAO — the School of the Photographic Arts Ottawa — in Winter 2026.</p>
+        <div class="stats">
+          <div class="stat"><b>5</b><span>Collections — street, architectural, nature, still life &amp; portrait</span></div>
+          <div class="stat"><b>3</b><span>Cities at the heart of the work — Ottawa, Toronto, Montréal</span></div>
+          <div class="stat"><b>Feb 2027</b><span>Next exhibition — details to be confirmed</span></div>
+        </div>
+      </div>
+      <img src="images/img-02.jpg" alt="Winter Mist — frosted trees and a frozen pond">
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:clamp(56px,8vw,100px)">
+    <div class="sec-head"><div><p class="kicker">Collections</p><h2>Featured collections</h2></div><button class="btn ghost" data-nav="portfolio">All collections →</button></div>
+    <div class="coll-grid" id="homeColls"></div>
+  </div>
+
+  <div class="wrap" style="padding-top:clamp(56px,8vw,100px)">
+    <div class="sec-head"><div><p class="kicker">Selected Works</p><h2>Selected works</h2></div><p class="note">Tap any photograph to view it full-screen.</p></div>
+    <div class="masonry" id="homeWorks"></div>
+  </div>
+
+  <div class="wrap" style="padding:clamp(56px,8vw,100px) clamp(18px,4vw,56px)">
+    <div class="exhib">
+      <div>
+        <p class="kicker">Exhibition · February 2027</p>
+        <h2>A new body of work, shown for the first time.</h2>
+        <p class="lede">Martin's February 2027 exhibition will bring together new Canadian winter work, the SPAO portrait triptychs and large-format city panoramas. <span class="ph-tag">Venue &amp; dates — to be confirmed</span></p>
+        <p class="lede">Exact dates and venue will be announced here as soon as they are confirmed.</p>
+        <button class="btn" data-nav="exhibitions" style="margin-top:10px">Exhibition details &amp; enquiries</button>
+      </div>
+      <img src="images/img-03.jpg" alt="Panoramic Ottawa Downtown 2026">
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:clamp(56px,8vw,100px)">
+    <div class="sec-head"><div><p class="kicker">Journal</p><h2>From the journal</h2></div><button class="btn ghost" data-nav="journal">All stories →</button></div>
+    <div class="jgrid" id="homeJournal"></div>
+    <div class="sec-head" style="margin-top:64px"><div><p class="kicker">Ahead</p><h2>Upcoming projects</h2></div><button class="btn ghost" data-nav="projects">See what's coming →</button></div>
+    <div class="jgrid" id="homeProjects"></div>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section class="view" id="view-portfolio">
+  <div class="wrap">
+    <p class="kicker">Portfolio</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem);max-width:18ch">Five collections, one way of seeing.</h2>
+    <p class="lede" style="margin:16px 0 30px">Filter by collection, then open any photograph full-screen. Titles are Martin's own, as published on his original site.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px" id="filters" role="group" aria-label="Filter collections">
+      <button class="chip on" data-filter="all">All Works</button>
+      <button class="chip" data-filter="street">Street</button>
+      <button class="chip" data-filter="architectural">Architectural</button>
+      <button class="chip" data-filter="nature">Nature</button>
+      <button class="chip" data-filter="stilllife">Still Life</button>
+      <button class="chip" data-filter="portrait">Portrait</button>
+    </div>
+    <div class="masonry" id="portfolioGrid"></div>
+    <p class="note" id="filterCount" style="margin-top:14px"></p>
+  </div>
+</section>
+
+<!-- ================= JOURNAL ================= -->
+<section class="view" id="view-journal">
+  <div class="wrap">
+    <p class="kicker">Journal</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem)">Stories behind the photographs.</h2>
+    <p class="lede" style="margin:16px 0 36px">Field notes, behind-the-scenes and creative inspiration — from winter shoots in the capital to dawn on the Bosphorus.</p>
+    <div class="jgrid" id="journalGrid"></div>
+  </div>
+</section>
+
+<!-- ================= ARTICLE ================= -->
+<section class="view" id="view-article">
+  <div class="wrap"><div class="article" id="articleBody"></div></div>
+</section>
+
+<!-- ================= STORE ================= -->
+<section class="view" id="view-store">
+  <div class="wrap">
+    <p class="kicker">Art Store</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem)">Prints, made to be lived with.</h2>
+    <p class="lede" style="margin:16px 0 8px">Fine-art prints of Martin's photographs, in the sizes he already offers — from 6×4 up to the 31×19 Kingston Boardwalk panorama. Framing options on every piece.</p>
+    <p style="margin:0 0 34px"><span class="ph-tag">Placeholder prices — to be confirmed before launch</span></p>
+    <div class="sgrid" id="storeGrid"></div>
+
+    <div id="checkoutBox" style="margin-top:56px;display:none">
+      <div class="exhib" style="display:block">
+        <p class="kicker">Demo Checkout</p>
+        <h2 style="font-size:2rem;margin-bottom:14px">Review &amp; confirm</h2>
+        <div id="checkoutSummary"></div>
+        <form id="checkoutForm" novalidate style="margin-top:20px;max-width:560px">
+          <div class="row">
+            <div class="field"><label for="co-name">Full name</label><input id="co-name" required><p class="err">Please enter your name.</p></div>
+            <div class="field"><label for="co-email">Email</label><input id="co-email" type="email" required><p class="err">Please enter a valid email.</p></div>
+          </div>
+          <div class="field"><label for="co-card">Card (demo — do not enter real details)</label><input id="co-card" placeholder="4242 4242 4242 4242" required><p class="err">Please enter the demo card number.</p></div>
+          <button class="btn" type="submit">Confirm Demo Order</button>
+        </form>
+        <div class="okbox" id="checkoutOk" style="margin-top:20px"><b>Thank you.</b><br>No order has been placed yet — this is a demo checkout. Your selections are shown above for illustration only, and no payment has been taken.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT ================= -->
+<section class="view" id="view-product">
+  <div class="wrap"><div id="productBody"></div></div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="view" id="view-projects">
+  <div class="wrap">
+    <p class="kicker">Upcoming Projects</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem);max-width:20ch">The next chapter, in progress.</h2>
+    <p class="lede" style="margin:16px 0 40px">Work now in development for the January 2027 launch and beyond. Release details are placeholders until confirmed.</p>
+    <div id="projectList" style="display:grid;gap:26px"></div>
+  </div>
+</section>
+
+<!-- ================= EXHIBITIONS ================= -->
+<section class="view" id="view-exhibitions">
+  <div class="wrap">
+    <p class="kicker">Exhibitions</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem)">February 2027</h2>
+    <div class="exhib" style="margin:30px 0 44px">
+      <div>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.8rem)">Martin Legault — New Work</h2>
+        <p class="lede">A solo exhibition of new photography: Canadian winter landscapes, the Winter 2026 SPAO portrait triptychs, and large-format panoramas of Ottawa, Toronto and Montréal.</p>
+        <p><span class="ph-tag">Dates — to be confirmed</span> &nbsp;<span class="ph-tag">Venue — to be confirmed</span> &nbsp;<span class="ph-tag">City — to be confirmed</span></p>
+        <p class="note">Venue, dates and opening details will be published here once confirmed. Use the enquiry form below for exhibition and press enquiries in the meantime.</p>
+      </div>
+      <img src="images/img-04.jpg" alt="Sunrise at the Montréal Clock Tower and Jacques Cartier Bridge">
+    </div>
+    <div class="sec-head"><div><h2 style="font-size:2rem">Featured in the exhibition</h2></div></div>
+    <div class="masonry" id="exhibWorks"></div>
+    <div class="split" style="margin-top:64px;align-items:start">
+      <div>
+        <h2 style="font-size:2rem;margin-bottom:12px">Past &amp; future exhibitions</h2>
+        <p class="lede">Further exhibition history and future dates will be listed here as they are confirmed.</p>
+        <p style="margin-top:14px"><span class="ph-tag">Exhibition history — to be confirmed</span></p>
+      </div>
+      <div>
+        <h2 style="font-size:2rem;margin-bottom:12px">Exhibition enquiry</h2>
+        <form id="exhibForm" novalidate>
+          <div class="row">
+            <div class="field"><label for="ex-name">Name</label><input id="ex-name" required><p class="err">Please enter your name.</p></div>
+            <div class="field"><label for="ex-email">Email</label><input id="ex-email" type="email" required><p class="err">Please enter a valid email.</p></div>
+          </div>
+          <div class="field"><label for="ex-msg">Message</label><textarea id="ex-msg" required></textarea><p class="err">Please write a short message.</p></div>
+          <button class="btn" type="submit">Send Exhibition Enquiry</button>
+          <div class="okbox" id="exhibOk" style="margin-top:16px"><b>Thank you — enquiry noted.</b><br>This is a demonstration form: nothing has been sent yet. Exhibition contact details will be published here once confirmed.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="view" id="view-contact">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2 style="font-size:clamp(2.4rem,5vw,3.8rem)">Start a conversation.</h2>
+        <p class="lede" style="margin:16px 0">For print enquiries, commissions, collaborations and exhibition questions, write using the form — or by email once the studio address is published.</p>
+        <p><span class="ph-tag">Email — to be confirmed</span></p>
+        <p class="lede">Studio: Ottawa, Canada.<br>New website launching January 2027.</p>
+        <img src="images/img-05.jpg" alt="Sunrise over the Ottawa River" style="margin-top:24px;height:300px">
+      </div>
+      <form id="contactForm" novalidate style="background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3vw,34px)">
+        <div class="row">
+          <div class="field"><label for="ct-name">Name *</label><input id="ct-name" required><p class="err">Please enter your name.</p></div>
+          <div class="field"><label for="ct-email">Email *</label><input id="ct-email" type="email" required><p class="err">Please enter a valid email.</p></div>
+        </div>
+        <div class="field"><label for="ct-subject">Subject</label>
+          <select id="ct-subject"><option>Print enquiry</option><option>Commission</option><option>Exhibition — February 2027</option><option>Collaboration</option><option>Other</option></select></div>
+        <div class="field"><label for="ct-msg">Message *</label><textarea id="ct-msg" required></textarea><p class="err">Please write a short message.</p></div>
+        <button class="btn" type="submit" style="width:100%">Send Message</button>
+        <div class="okbox" id="contactOk" style="margin-top:16px"><b>Thank you — message noted.</b><br>This is a demonstration form: nothing has been sent yet. The studio email will be published here once confirmed.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <span class="fb">Martin Legault Photo</span>
+    <span class="hideS">Ottawa, Canada</span>
+    <a href="#" data-nav="portfolio">Portfolio</a>
+    <a href="#" data-nav="store" class="hideS">Art Store</a>
+    <a href="#" data-nav="exhibitions">Feb 2027</a>
+    <a href="#" data-nav="contact">Contact</a>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="overlay" id="lightbox" role="dialog" aria-label="Full-screen photograph viewer">
+  <div class="lb-top"><b id="lbTitle">—</b><button class="lbbtn" id="lbClose" aria-label="Close">✕</button></div>
+  <div class="lb-body">
+    <button class="lbbtn" id="lbPrev" aria-label="Previous photograph">‹</button>
+    <img id="lbImg" src="images/img-01.jpg" alt="Panorama — Downtown Toronto">
+    <button class="lbbtn" id="lbNext" aria-label="Next photograph">›</button>
+  </div>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<!-- CART -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="lb-top"><b style="font-family:var(--serif);font-size:1.3rem">Your Cart</b><button class="lbbtn" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div style="padding:18px;border-top:1px solid var(--line)">
+    <p style="display:flex;justify-content:space-between;margin:0 0 6px"><span>Total (placeholder prices)</span><b id="cartTotal">$0</b></p>
+    <p class="note">Placeholder pricing — to be confirmed before launch.</p>
+    <button class="btn" id="goCheckout" style="width:100%">Proceed to Demo Checkout</button>
+  </div>
+</aside>
+
+<script>
+var WORKS=[
+ {t:"Panorama — Downtown Toronto",c:"architectural",img:"images/img-01.jpg",loc:"Toronto, Ontario"},
+ {t:"Dows Lake",c:"nature",img:"images/img-06.jpg",loc:"Ottawa, Ontario · 21×11"},
+ {t:"Montréal UdM — La nuit",c:"architectural",img:"images/img-07.jpg",loc:"Montréal, Québec"},
+ {t:"Winter Mist — Frosted Trees, Frozen Pond",c:"nature",img:"images/img-02.jpg",loc:"Ontario"},
+ {t:"Apocalyptic Sky — Mississippi River, Blakeney",c:"nature",img:"images/img-08.jpg",loc:"Blakeney, Ontario"},
+ {t:"Sunrise Over Ottawa River",c:"nature",img:"images/img-05.jpg",loc:"Ottawa, Ontario"},
+ {t:"Kylemore Abbey Castle",c:"architectural",img:"images/img-09.jpg",loc:"Ireland"},
+ {t:"Bobcat",c:"nature",img:"images/img-10.jpg",loc:"Wildlife study"},
+ {t:"Fou de Bassan — Northern Gannet, Flying",c:"nature",img:"images/img-11.jpg",loc:"Seabird study"},
+ {t:"Tree Web",c:"nature",img:"images/img-12.jpg",loc:"Nature study"},
+ {t:"Navigating on the Bosphorus",c:"street",img:"images/img-13.jpg",loc:"Travel — Bosphorus"},
+ {t:"Kingston Boardwalk",c:"architectural",img:"images/img-14.jpg",loc:"Kingston, Ontario · 31×19"},
+ {t:"Sunrise in the Old Port of Montréal",c:"architectural",img:"images/img-15.jpg",loc:"Montréal, Québec"},
+ {t:"Sunrise — Montréal Clock Tower & Jacques Cartier Bridge",c:"architectural",img:"images/img-04.jpg",loc:"Montréal, Québec"},
+ {t:"Luis — SPAO Environmental Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-16.jpg",loc:"SPAO, Ottawa"},
+ {t:"Devon — SPAO Conceptual Portrait, Winter 2026 (Triptych)",c:"portrait",img:"images/img-17.jpg",loc:"SPAO, Ottawa"},
+ {t:"Serge — Triptych",c:"portrait",img:"images/img-18.jpg",loc:"SPAO, Ottawa"},
+ {t:"Street Photography — Triptych 1",c:"street",img:"images/img-19.jpg",loc:"Street series"},
+ {t:"Ice Skating — Toronto Old City Hall",c:"street",img:"images/img-20.jpg",loc:"Toronto, Ontario"},
+ {t:"Cyclist — Beach at Carleton-sur-mer",c:"street",img:"images/img-21.jpg",loc:"Carleton-sur-mer, Québec"},
+ {t:"Runner on Scott Street",c:"street",img:"images/img-22.jpg",loc:"Ottawa, Ontario"},
+ {t:"Frosted Maple Leaf",c:"nature",img:"images/img-23.jpg",loc:"Nature study · 15½×15½"},
+ {t:"Colours, Lines, Reflexions",c:"stilllife",img:"images/img-24.jpg",loc:"Abstract study"},
+ {t:"Mystery Man",c:"street",img:"images/img-25.jpg",loc:"Street portrait"},
+ {t:"Panoramic Ottawa Downtown 2026",c:"architectural",img:"images/img-03.jpg",loc:"Ottawa, Ontario"},
+ {t:"Ottawa Car Show — Mustang",c:"stilllife",img:"images/img-26.jpg",loc:"Ottawa Car Show · 10×8"},
+ {t:"Car Show — Porsche",c:"stilllife",img:"images/img-27.jpg",loc:"Ottawa Car Show · 10×8"},
+ {t:"Ottawa — A Northern Capital",c:"architectural",img:"images/img-28.jpg",loc:"Ottawa, Ontario"},
+ {t:"Maison Rivière aux Renards — Gaspésie",c:"nature",img:"images/img-29.jpg",loc:"Gaspésie, Québec"},
+ {t:"Etobicoke",c:"architectural",img:"images/img-30.jpg",loc:"Toronto, Ontario"}
+];
+var CATNAMES={street:"Street Photography",architectural:"Architectural Photography",nature:"Nature Photography",stilllife:"Still Life Photography",portrait:"Portrait Photography"};
+var COLLS=[
+ {c:"street",img:"images/img-19.jpg",cls:"c1"},{c:"architectural",img:"images/img-03.jpg",cls:"c2"},
+ {c:"nature",img:"images/img-02.jpg",cls:"c3"},{c:"stilllife",img:"images/img-24.jpg",cls:"c4"},{c:"portrait",img:"images/img-16.jpg",cls:"c5"}
+];
+var SIZES=["6×4","7×5","10×8","17×11","21×11","31×19"];
+var SIZEPRICE={"6×4":45,"7×5":65,"10×8":95,"17×11":165,"21×11":240,"31×19":420};
+var FRAMES=[{n:"Unframed print",add:0},{n:"Gallery frame — natural oak",add:85},{n:"Gallery frame — matte black",add:85},{n:"Float mount — white",add:60}];
+var PRODUCTS=[
+ {id:0,wi:24,t:"Panoramic Ottawa Downtown 2026",d:"The capital at full stretch — Parliament, the river and winter light in a single wide frame."},
+ {id:1,wi:3,t:"Winter Mist — Frosted Trees, Frozen Pond",d:"Frosted trees dissolving into mist above a frozen pond. Martin's signature Canadian winter image."},
+ {id:2,wi:1,t:"Dows Lake",d:"Ottawa's Dows Lake in calm light — a quiet, wide 21×11 composition for living spaces."},
+ {id:3,wi:13,t:"Sunrise — Montréal Clock Tower & Jacques Cartier Bridge",d:"First light over the Old Port: the Clock Tower and Jacques Cartier Bridge at sunrise."},
+ {id:4,wi:11,t:"Kingston Boardwalk",d:"The Kingston waterfront boardwalk, offered in the full 31×19 panoramic format."},
+ {id:5,wi:21,t:"Frosted Maple Leaf",d:"A single maple leaf held in frost — a square-format nature study, printed 15½×15½."},
+ {id:6,wi:14,t:"Luis — SPAO Environmental Portrait (Triptych)",d:"From the Winter 2026 SPAO portrait series — an environmental triptych made in Ottawa."},
+ {id:7,wi:8,t:"Fou de Bassan — Northern Gannet, Flying",d:"A Northern Gannet in full flight — a study of grace, speed and Atlantic light."}
+];
+var ARTICLES=[
+ {id:0,tag:"Behind the Scenes",date:"Journal · Winter 2026",t:"Inside the SPAO Portrait Triptychs",img:"images/img-17.jpg",ex:"How the Winter 2026 portrait triptychs — Luis, Devon, Serge, Rex and Mike — were conceived and made at the School of the Photographic Arts Ottawa.",body:["This winter, at SPAO — the School of the Photographic Arts Ottawa — Martin set out to make portraits that work as triptychs: three frames that only make complete sense together. Luis was photographed environmentally, in his own space; Devon conceptually, built around a single idea.","The discipline of the triptych is patience. Each frame has to hold on its own, yet leave something unsaid for the next. Serge, Rex and Mike completed the series — five sitters, five temperaments, one consistent winter light.","The full series will be shown publicly for the first time at the February 2027 exhibition. Full article text — placeholder, to be completed before launch."]},
+ {id:1,tag:"Field Notes",date:"Journal · Ottawa",t:"Chasing Sunrise on the Ottawa River",img:"images/img-05.jpg",ex:"Cold mornings, patient waiting, and the few minutes when the capital's river turns to gold.",body:["The alarm goes at five. By six, Martin is on the Ottawa River with a tripod, gloves, and no guarantee of anything. Sunrise photography in the capital is an exercise in showing up: most mornings give grey; a few give gold.","The framed 6×4 study 'Sunrise Over Ottawa River' came from one of the generous mornings — the light arriving all at once, the water still enough to hold it.","His advice, such as it is: scout the evening before, arrive in the dark, and stay twenty minutes past the moment you think is the photograph. Full article text — placeholder, to be completed before launch."]},
+ {id:2,tag:"Travel",date:"Journal · Montréal",t:"Dawn in the Old Port of Montréal",img:"images/img-15.jpg",ex:"The Clock Tower, the Jacques Cartier Bridge, and a city that rewards those who rise before it.",body:["Montréal's Old Port at dawn belongs to almost no one: a few runners, the gulls, and the light moving up the Clock Tower. Across three mornings, Martin worked the same ground — the tower, the bridge, the blue-gold hour before the sun clears the river.","'Quand le jour se lève' — when the day rises — became the title of the series, and the feeling of it: a great city, briefly quiet.","The Old Port sunrises anchor the Architectural collection and will hang as large prints in February 2027. Full article text — placeholder, to be completed before launch."]},
+ {id:3,tag:"Inspiration",date:"Journal · Travel",t:"From the Bosphorus to the Gaspésie",img:"images/img-13.jpg",ex:"Water as a subject: ferries on the Bosphorus, a house at Rivière-aux-Renards, and the Kingston boardwalk.",body:["Some subjects follow a photographer home. For Martin it is water in motion: navigating the Bosphorus between two continents, the St. Lawrence opening past the Gaspésie, the boardwalk at Kingston where the lake begins.","Each place asks for a different patience — Istanbul's ferries wait for no one; the Maison Rivière aux Renards in the Gaspésie asks only that you notice it before the light goes.","The travel work feeds everything else: it is where the eye rests, and where it learns. Full article text — placeholder, to be completed before launch."]}
+];
+var PROJECTS=[
+ {t:"Canadian Winter — A Continuing Series",img:"images/img-08.jpg",when:"In progress · Expected release — to be confirmed",d:"A long-form continuation of the winter work: apocalyptic skies over the Mississippi River at Blakeney, frosted maples, frozen ponds — the season Martin returns to every year.",tag:"Nature"},
+ {t:"The February 2027 Exhibition Collection",img:"images/img-14.jpg",when:"Premiering February 2027 · Details to be confirmed",d:"Large-format prints prepared for the exhibition: the 31×19 Kingston Boardwalk panorama, the Ottawa Downtown 2026 panorama, and the complete SPAO portrait triptychs.",tag:"Exhibition"},
+ {t:"Street Life — Toronto & Ottawa",img:"images/img-20.jpg",when:"In progress · Expected release — to be confirmed",d:"Skaters at Toronto's Old City Hall, winter sunbathers downtown, a runner on Scott Street — an ongoing street series about how Canadian cities live outdoors, in every season.",tag:"Street"}
+];
+var cart=[]; var lbList=WORKS; var lbIdx=0;
+
+/* ---------- helpers ---------- */
+function $(s){return document.querySelector(s)}
+function $all(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function esc(s){return s.replace(/&/g,"&amp;")}
+function workCard(w,i,list){return '<figure class="work" data-lb="'+i+'" data-list="'+list+'" tabindex="0" role="button" aria-label="View '+esc(w.t)+' full screen"><img src="'+w.img+'" alt="'+esc(w.t)+' — photograph by Martin Legault"><figcaption><b>'+w.t+'</b><small>'+CATNAMES[w.c]+' · '+w.loc+'</small></figcaption></figure>'}
+
+/* ---------- navigation ---------- */
+function showView(name){
+  $all('.view').forEach(function(v){v.classList.remove('on')});
+  var el=document.getElementById('view-'+name); if(el)el.classList.add('on');
+  $all('nav.main a').forEach(function(a){a.classList.toggle('on',a.getAttribute('data-nav')===name)});
+  $('#mmenu').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('click',function(e){
+  var nav=e.target.closest('[data-nav]');
+  if(nav){e.preventDefault();showView(nav.getAttribute('data-nav'));return}
+  var lb=e.target.closest('[data-lb]');
+  if(lb){openLB(parseInt(lb.getAttribute('data-lb'),10),lb.getAttribute('data-list'));return}
+});
+$('#burger').addEventListener('click',function(){$('#mmenu').classList.toggle('open')});
+
+/* ---------- render: home ---------- */
+$('#homeColls').innerHTML=COLLS.map(function(c){var n=WORKS.filter(function(w){return w.c===c.c}).length;return '<button class="coll '+c.cls+'" data-goto-filter="'+c.c+'"><img src="'+c.img+'" alt="'+CATNAMES[c.c]+'"><em>'+n+' works</em><span>'+CATNAMES[c.c]+'</span></button>'}).join('');
+$all('[data-goto-filter]').forEach(function(b){b.addEventListener('click',function(){showView('portfolio');setFilter(b.getAttribute('data-goto-filter'))})});
+$('#homeWorks').innerHTML=[0,3,18,13,21,9].map(function(i){return workCard(WORKS[i],i,'home')}).join('');
+$('#homeJournal').innerHTML=ARTICLES.slice(0,3).map(jCard).join('');
+$('#homeProjects').innerHTML=PROJECTS.map(pCard).join('');
+function jCard(a){return '<button class="jcard" data-article="'+a.id+'"><img src="'+a.img+'" alt="'+esc(a.t)+'"><div class="jb"><p class="jmeta">'+a.tag+' · '+a.date+'</p><h3>'+a.t+'</h3><p>'+a.ex+'</p></div></button>'}
+function pCard(p){return '<article class="jcard" style="cursor:default"><img src="'+p.img+'" alt="'+esc(p.t)+'"><div class="jb"><p class="jmeta">'+p.tag+' · '+p.when+'</p><h3>'+p.t+'</h3><p>'+p.d+'</p></div></article>'}
+document.addEventListener('click',function(e){var ac=e.target.closest('[data-article]');if(ac)openArticle(parseInt(ac.getAttribute('data-article'),10))});
+
+/* ---------- portfolio + filters ---------- */
+function renderPortfolio(f){
+  var list=WORKS.map(function(w,i){return{w:w,i:i}}).filter(function(x){return f==='all'||x.w.c===f});
+  lbList=list.map(function(x){return x.w});
+  $('#portfolioGrid').innerHTML=list.map(function(x,k){return workCard(x.w,k,'pf')}).join('');
+  $('#filterCount').textContent=list.length+' photograph'+(list.length===1?'':'s')+(f==='all'?' across all five collections':' in '+CATNAMES[f]);
+}
+function setFilter(f){$all('#filters .chip').forEach(function(ch){ch.classList.toggle('on',ch.getAttribute('data-filter')===f)});renderPortfolio(f)}
+$all('#filters .chip').forEach(function(ch){ch.addEventListener('click',function(){setFilter(ch.getAttribute('data-filter'))})});
+renderPortfolio('all');
+$('#exhibWorks').innerHTML=[24,14,11,3].map(function(i){return workCard(WORKS[i],i,'ex')}).join('');
+
+/* ---------- lightbox ---------- */
+var currentList=WORKS;
+function openLB(idx,listName){
+  if(listName==='pf'){currentList=lbList}else{currentList=WORKS}
+  lbIdx=idx;updateLB();$('#lightbox').classList.add('open');document.body.style.overflow='hidden';
+}
+function updateLB(){var w=currentList[lbIdx];$('#lbImg').src=w.img;$('#lbImg').alt=w.t;$('#lbTitle').textContent=w.t;$('#lbCap').textContent=CATNAMES[w.c]+' · '+w.loc+' · '+(lbIdx+1)+' of '+currentList.length+' — Martin Legault Photo'}
+function closeLB(){$('#lightbox').classList.remove('open');document.body.style.overflow=''}
+$('#lbClose').addEventListener('click',closeLB);
+$('#lbPrev').addEventListener('click',function(){lbIdx=(lbIdx-1+currentList.length)%currentList.length;updateLB()});
+$('#lbNext').addEventListener('click',function(){lbIdx=(lbIdx+1)%currentList.length;updateLB()});
+document.addEventListener('keydown',function(e){if(!$('#lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')$('#lbPrev').click();if(e.key==='ArrowRight')$('#lbNext').click()});
+
+/* ---------- journal ---------- */
+$('#journalGrid').innerHTML=ARTICLES.map(jCard).join('');
+function openArticle(id){
+  var a=ARTICLES[id];
+  $('#articleBody').innerHTML='<button class="btn ghost small" data-nav="journal">← Back to Journal</button><p class="jmeta" style="margin-top:26px">'+a.tag+' · '+a.date+'</p><h2 style="font-size:clamp(2.2rem,5vw,3.6rem)">'+a.t+'</h2><img class="heroimg" src="'+a.img+'" alt="'+esc(a.t)+'">'+a.body.map(function(p){return '<p>'+p+'</p>'}).join('')+'<p style="margin-top:26px"><button class="btn" data-nav="portfolio">See the photographs</button></p>';
+  showView('article');
+}
+
+/* ---------- projects page ---------- */
+$('#projectList').innerHTML=PROJECTS.map(function(p,i){return '<article class="exhib" style="margin:0"><div><p class="kicker">'+p.tag+'</p><h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">'+p.t+'</h2><p class="lede">'+p.d+'</p><p><span class="ph-tag">'+p.when+'</span></p><button class="btn ghost" data-nav="contact">Ask about this project</button></div><img src="'+p.img+'" alt="'+esc(p.t)+'"></article>'}).join('');
+
+/* ---------- store ---------- */
+function basePrice(p){return SIZEPRICE["17×11"]}
+$('#storeGrid').innerHTML=PRODUCTS.map(function(p){var w=WORKS[p.wi];return '<button class="pcard" data-product="'+p.id+'"><img src="'+w.img+'" alt="'+esc(p.t)+' print"><div class="pb"><h3>'+p.t+'</h3><p class="price">From $'+basePrice(p)+' CAD <small>· placeholder price</small></p><p class="note">Sizes 6×4 – 31×19 · framing options</p></div></button>'}).join('');
+document.addEventListener('click',function(e){var pc=e.target.closest('[data-product]');if(pc)openProduct(parseInt(pc.getAttribute('data-product'),10))});
+var curProd=null,curSize="17×11",curFrame=0;
+function openProduct(id){
+  curProd=PRODUCTS[id];curSize="17×11";curFrame=0;var w=WORKS[curProd.wi];
+  $('#productBody').innerHTML='<button class="btn ghost small" data-nav="store">← Back to Art Store</button>'+
+  '<div class="pd-grid" style="margin-top:24px"><img src="'+w.img+'" alt="'+esc(curProd.t)+'"><div>'+
+  '<p class="kicker">'+CATNAMES[w.c]+'</p><h2 style="font-size:clamp(2rem,4vw,3rem)">'+curProd.t+'</h2>'+
+  '<p class="lede" style="margin:14px 0">'+curProd.d+'</p>'+
+  '<p><span class="ph-tag">Placeholder price — to be confirmed</span></p>'+
+  '<p style="font-weight:700">Print size</p><div class="optrow" id="sizeRow">'+SIZES.map(function(s){return '<button class="chip'+(s===curSize?' on':'')+'" data-size="'+s+'">'+s+' in — $'+SIZEPRICE[s]+'</button>'}).join('')+'</div>'+
+  '<p style="font-weight:700">Framing</p><div class="optrow" id="frameRow">'+FRAMES.map(function(f,i){return '<button class="chip'+(i===0?' on':'')+'" data-frame="'+i+'">'+f.n+(f.add?' +$'+f.add:'')+'</button>'}).join('')+'</div>'+
+  '<p style="font-size:1.3rem"><b>Total: $<span id="pdTotal"></span> CAD</b> <span class="note">(placeholder)</span></p>'+
+  '<button class="btn" id="addCart" style="width:100%">Add to Cart</button>'+
+  '<p class="note" style="margin-top:12px">Printed to order. Checkout is a demonstration — no payment is taken on this concept site.</p>'+
+  '</div></div>';
+  updTotal();showView('product');
+  $all('#sizeRow .chip').forEach(function(ch){ch.addEventListener('click',function(){curSize=ch.getAttribute('data-size');$all('#sizeRow .chip').forEach(function(x){x.classList.toggle('on',x===ch)});updTotal()})});
+  $all('#frameRow .chip').forEach(function(ch){ch.addEventListener('click',function(){curFrame=parseInt(ch.getAttribute('data-frame'),10);$all('#frameRow .chip').forEach(function(x){x.classList.toggle('on',x===ch)});updTotal()})});
+  $('#addCart').addEventListener('click',function(){
+    cart.push({pid:curProd.id,t:curProd.t,img:w.img,size:curSize,frame:FRAMES[curFrame].n,price:SIZEPRICE[curSize]+FRAMES[curFrame].add});
+    renderCart();openCart();
+  });
+}
+function updTotal(){$('#pdTotal').textContent=SIZEPRICE[curSize]+FRAMES[curFrame].add}
+
+/* ---------- cart ---------- */
+function renderCart(){
+  $('#cartCount').textContent=cart.length;
+  if(!cart.length){$('#cartItems').innerHTML='<p class="lede">Your cart is empty. Browse the Art Store to add a print.</p>'}
+  else{$('#cartItems').innerHTML=cart.map(function(it,i){return '<div class="cart-item"><img src="'+it.img+'" alt=""><div style="flex:1"><b style="font-family:var(--serif);font-size:1.05rem">'+it.t+'</b><br><small>'+it.size+' in · '+it.frame+'</small><br><b>$'+it.price+' CAD</b></div><button class="chip" data-remove="'+i+'" aria-label="Remove item">Remove</button></div>'}).join('')}
+  $('#cartTotal').textContent='$'+cart.reduce(function(s,it){return s+it.price},0)+' CAD';
+}
+document.addEventListener('click',function(e){var r=e.target.closest('[data-remove]');if(r){cart.splice(parseInt(r.getAttribute('data-remove'),10),1);renderCart()}});
+function openCart(){$('#cartDrawer').classList.add('open');$('#scrim').classList.add('show')}
+function closeCart(){$('#cartDrawer').classList.remove('open');$('#scrim').classList.remove('show')}
+$('#cartBtn').addEventListener('click',openCart);
+$('#cartClose').addEventListener('click',closeCart);
+$('#scrim').addEventListener('click',closeCart);
+renderCart();
+$('#goCheckout').addEventListener('click',function(){
+  closeCart();showView('store');
+  var box=$('#checkoutBox');box.style.display='block';
+  $('#checkoutSummary').innerHTML=cart.length?cart.map(function(it){return '<p style="display:flex;justify-content:space-between;margin:4px 0"><span>'+it.t+' — '+it.size+' in, '+it.frame+'</span><b>$'+it.price+'</b></p>'}).join('')+'<p style="display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px"><span>Total (placeholder)</span><b>$'+cart.reduce(function(s,it){return s+it.price},0)+' CAD</b></p>':'<p class="lede">Your cart is empty — add a print above, then return to checkout.</p>';
+  setTimeout(function(){box.scrollIntoView({behavior:'smooth'})},80);
+});
+
+/* ---------- forms ---------- */
+function validate(form){
+  var ok=true;
+  form.querySelectorAll('[required]').forEach(function(inp){
+    var err=inp.parentElement.querySelector('.err');var bad=!inp.value.trim()||(inp.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
+    if(err)err.style.display=bad?'block':'none'; if(bad)ok=false;
+  });return ok;
+}
+function wireForm(id,okId){var f=document.getElementById(id);f.addEventListener('submit',function(e){e.preventDefault();if(validate(f)){document.getElementById(okId).classList.add('show');f.querySelectorAll('input,textarea').forEach(function(i){if(i.type!=='submit')i.value=''})}})}
+wireForm('contactForm','contactOk');wireForm('exhibForm','exhibOk');
+$('#checkoutForm').addEventListener('submit',function(e){e.preventDefault();if(validate(e.target)){$('#checkoutOk').classList.add('show')}});
+</script>
+</body>
+</html>
