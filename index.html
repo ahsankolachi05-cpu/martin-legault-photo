@@ -38,6 +38,7 @@ a{color:inherit}
 .chip.on{background:var(--ink);color:#FBF8F2;border-color:var(--ink)}
 .note{font-size:.8rem;color:var(--muted)}
 .ph-tag{display:inline-block;background:var(--sand);border:1px dashed var(--accent2);color:var(--accent);border-radius:6px;padding:2px 9px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sample-badge{position:absolute;top:12px;left:12px;z-index:2;background:rgba(251,248,242,.96);border:1px dashed var(--accent2);color:var(--accent);border-radius:999px;padding:4px 11px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 /* HEADER */
 header{position:sticky;top:0;z-index:60;background:rgba(251,248,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .hbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
@@ -171,14 +172,14 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
   <div class="wrap hbar">
     <a class="brand" href="#" data-nav="home">Martin Legault<small>Photo · Ottawa, Canada</small></a>
     <nav class="main" aria-label="Main">
-      <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="contact">Contact</a>
+      <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="gallery">Gallery</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="contact">Contact</a>
     </nav>
     <div class="hacts">
       <button class="burger" id="burger" aria-label="Menu">Menu</button>
     </div>
   </div>
   <div class="wrap mmenu" id="mmenu">
-    <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="contact">Contact</a>
+    <a href="#" data-nav="home">Home</a><a href="#" data-nav="portfolio">Portfolio</a><a href="#" data-nav="gallery">Gallery</a><a href="#" data-nav="journal">Journal</a><a href="#" data-nav="store">Art Store</a><a href="#" data-nav="projects">Upcoming Projects</a><a href="#" data-nav="contact">Contact</a>
   </div>
 </header>
 
@@ -238,6 +239,25 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
     </div>
     <div class="masonry" id="portfolioGrid"></div>
     <p class="note" id="filterCount" style="margin-top:14px"></p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="view" id="view-gallery">
+  <div class="wrap">
+    <p class="kicker">Gallery</p>
+    <h2 style="font-size:clamp(2.4rem,5vw,4rem);max-width:18ch">Weddings, nature &amp; events.</h2>
+    <p class="lede" style="margin:16px 0 8px">A gallery in three parts. The Nature collection is Martin's own photography, shown with his own titles. The Wedding and Event collections are presented with sample images for now — each one is clearly marked — ready to be replaced with Martin's own wedding and event photographs.</p>
+    <p style="margin:0 0 30px"><span class="ph-tag">Wedding &amp; Event images are samples — to be replaced with Martin's own photographs</span></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px" id="gfilters" role="group" aria-label="Filter gallery collections">
+      <button class="chip on" data-gfilter="all">All</button>
+      <button class="chip" data-gfilter="wedding">Wedding</button>
+      <button class="chip" data-gfilter="nature">Nature</button>
+      <button class="chip" data-gfilter="event">Events</button>
+    </div>
+    <h3 id="galleryHead" style="font-size:1.6rem;margin:0 0 20px">All Photographs</h3>
+    <div class="masonry" id="galleryGrid"></div>
+    <p class="note" id="galleryCount" style="margin-top:14px"></p>
   </div>
 </section>
 
@@ -316,6 +336,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:18px 0;m
     <span class="fb">Martin Legault Photo</span>
     <span class="hideS">Ottawa, Canada</span>
     <a href="#" data-nav="portfolio">Portfolio</a>
+    <a href="#" data-nav="gallery" class="hideS">Gallery</a>
     <a href="#" data-nav="journal" class="hideS">Journal</a>
     <a href="#" data-nav="store" class="hideS">Art Store</a>
     <a href="#" data-nav="projects" class="hideS">Upcoming Projects</a>
@@ -368,7 +389,7 @@ var WORKS=[
  {t:"Maison Rivière aux Renards — Gaspésie",c:"nature",img:"images/img-29.jpg",loc:"Gaspésie, Québec"},
  {t:"Etobicoke",c:"architectural",img:"images/img-30.jpg",loc:"Toronto, Ontario"}
 ];
-var CATNAMES={street:"Street Photography",architectural:"Architectural Photography",nature:"Nature Photography",stilllife:"Still Life Photography",portrait:"Portrait Photography"};
+var CATNAMES={street:"Street Photography",architectural:"Architectural Photography",nature:"Nature Photography",stilllife:"Still Life Photography",portrait:"Portrait Photography",wedding:"Wedding Photography",event:"Event Photography"};
 var COLLS=[
  {c:"street",img:"images/img-18.jpg",cls:"c1"},{c:"architectural",img:"images/img-25.jpg",cls:"c2"},
  {c:"nature",img:"images/img-02.jpg",cls:"c3"},{c:"stilllife",img:"images/img-23.jpg",cls:"c4"},{c:"portrait",img:"images/img-15.jpg",cls:"c5"}
@@ -437,13 +458,49 @@ function setFilter(f){$all('#filters .chip').forEach(function(ch){ch.classList.t
 $all('#filters .chip').forEach(function(ch){ch.addEventListener('click',function(){setFilter(ch.getAttribute('data-filter'))})});
 renderPortfolio('all');
 
+/* ---------- gallery (Wedding · Nature · Events) ---------- */
+/* Nature entries are Martin's own photographs (WORKS indices); Wedding & Event entries are clearly-labelled samples. */
+var GALLERY=[
+ {g:"nature",wi:3},{g:"nature",wi:1},{g:"nature",wi:5},{g:"nature",wi:4},{g:"nature",wi:21},{g:"nature",wi:7},{g:"nature",wi:8},{g:"nature",wi:9},{g:"nature",wi:28},
+ {g:"wedding",img:"images/img-31.jpg",t:"The Bride, Lifted High by Her Guests"},
+ {g:"wedding",img:"images/img-32.jpg",t:"A Quiet Moment During the Ceremony"},
+ {g:"wedding",img:"images/img-33.jpg",t:"Celebrating on the Dance Floor"},
+ {g:"wedding",img:"images/img-34.jpg",t:"Exchanging Rings in the Garden"},
+ {g:"event",img:"images/img-35.jpg",t:"Confetti at a Gala Evening"},
+ {g:"event",img:"images/img-36.jpg",t:"Cheering Guests at a Formal Dinner"},
+ {g:"event",img:"images/img-37.jpg",t:"A Festival Crowd at Dusk"},
+ {g:"event",img:"images/img-38.jpg",t:"Hands Up at an Outdoor Concert"},
+ {g:"event",img:"images/img-39.jpg",t:"A Group Portrait at a Formal Evening"}
+].map(function(x){
+  if(x.wi!==undefined){var w=WORKS[x.wi];return{g:x.g,t:w.t,img:w.img,c:"nature",loc:w.loc,sample:false}}
+  return{g:x.g,t:x.t,img:x.img,c:x.g,loc:"Sample image",sample:true}
+});
+var GALHEADS={all:"All Photographs",wedding:"Wedding — Sample Images",nature:"Nature — Martin's Own Photographs",event:"Events — Sample Images"};
+var galList=[];
+function galCard(item,i){
+  var badge=item.sample?'<span class="sample-badge">Sample image</span>':'';
+  var sub=item.sample?(CATNAMES[item.c]+' · Sample — to be replaced'):(CATNAMES[item.c]+' · '+item.loc);
+  var alt=item.sample?(item.t+' — sample photograph'):(item.t+' — photograph by Martin Legault');
+  return '<figure class="work" data-lb="'+i+'" data-list="gal" tabindex="0" role="button" aria-label="View '+esc(item.t)+' full screen"><img src="'+item.img+'" alt="'+esc(alt)+'">'+badge+'<figcaption><b>'+item.t+'</b><small>'+sub+'</small></figcaption></figure>'
+}
+function renderGallery(f){
+  galList=GALLERY.filter(function(x){return f==='all'||x.g===f});
+  $('#galleryGrid').innerHTML=galList.map(function(x,k){return galCard(x,k)}).join('');
+  $('#galleryHead').textContent=GALHEADS[f];
+  var n=galList.length;
+  $('#galleryCount').textContent=f==='nature'?(n+" of Martin's own nature photographs"):f==='all'?(n+" photographs — Martin's nature work, plus sample wedding & event images"):(n+" sample photographs — to be replaced with Martin's own photographs");
+}
+function setGFilter(f){$all('#gfilters .chip').forEach(function(ch){ch.classList.toggle('on',ch.getAttribute('data-gfilter')===f)});renderGallery(f)}
+$all('#gfilters .chip').forEach(function(ch){ch.addEventListener('click',function(){setGFilter(ch.getAttribute('data-gfilter'))})});
+renderGallery('all');
+
 /* ---------- lightbox ---------- */
 var currentList=WORKS;
 function openLB(idx,listName){
-  if(listName==='pf'){currentList=lbList}else{currentList=WORKS}
+  if(listName==='pf'){currentList=lbList}else if(listName==='gal'){currentList=galList}else{currentList=WORKS}
   lbIdx=idx;updateLB();$('#lightbox').classList.add('open');document.body.style.overflow='hidden';
 }
-function updateLB(){var w=currentList[lbIdx];$('#lbImg').src=w.img;$('#lbImg').alt=w.t;$('#lbTitle').textContent=w.t;$('#lbCap').textContent=CATNAMES[w.c]+' · '+w.loc+' · '+(lbIdx+1)+' of '+currentList.length+' — Martin Legault Photo'}
+function updateLB(){var w=currentList[lbIdx];$('#lbImg').src=w.img;$('#lbImg').alt=w.t;$('#lbTitle').textContent=w.t;$('#lbCap').textContent=w.sample?("Sample image — to be replaced with Martin's own photograph · "+(lbIdx+1)+' of '+currentList.length):(CATNAMES[w.c]+' · '+w.loc+' · '+(lbIdx+1)+' of '+currentList.length+' — Martin Legault Photo')}
 function closeLB(){$('#lightbox').classList.remove('open');document.body.style.overflow=''}
 $('#lbClose').addEventListener('click',closeLB);
 $('#lbPrev').addEventListener('click',function(){lbIdx=(lbIdx-1+currentList.length)%currentList.length;updateLB()});
